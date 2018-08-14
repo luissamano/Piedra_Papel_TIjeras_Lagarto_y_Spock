@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet">
+
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet"
+            href="materialize/css/materialize.min.css" media="screen,projection"
+            />
+
+        <link rel="stylesheet" href="magic-master/magic.css">
+
+        <!-- development version, includes helpful console warnings -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <!-- JQuery 3.3.1 -->
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+
+    <body>
+
+        <nav>
+            <div class="nav-wrapper">
+                <a class="brand-logo center"></a>
+            </div>
+        </nav>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="container" id="main">
+
+            <div class="row">
+
+                <div class="col s12 m4 l4 card-panel hoverable" id="cardUsuario">
+                    <h5 class="center">Usuario</h5>
+                    <div class="input-field col s12 m12 l12">
+                        <select class="icons" id="selectUsuario">
+                            <option value="not" disabled selected>Elige una
+                                opción</option>
+                            <option value="lagarto"
+                                data-icon="resources/lagarto.jpg">Lagarto</option>
+                            <option value="papel"
+                                data-icon="resources/papel.jpg">Papel</option>
+                            <option value="piedra"
+                                data-icon="resources/piedra.jpg">Piedra</option>
+                            <option value="spock"
+                                data-icon="resources/spock.jpg">Spock</option>
+                            <option value="tijera"
+                                data-icon="resources/tijera.jpg">Tijera</option>
+                        </select>
+                    </div>
+                    <br>
+                    <img class="responsive-img" :src="usuario.imagen"
+                        width="1000px" height="1000px">
+                </div>
+
+                <div class="col"></div>
+                <div class="col s12 m4 l3">
+                    
+                    <div class="s12 m4 l3 card-panel center-align">
+                        <h4 id="ganador" ></h4>
+                    </div>
+                </div>
+                <div class="col"></div>
+
+                <div class="col s12 m4 l4 card-panel hoverable" id="cardComputer">
+                    <h5 class="center">Computadora</h5>
+                    <div class="input-field col s12">
+                        <input disabled value=""
+                            id="inputComputer" type="text" class="validate">
+                    </div>
+                    <img class="responsive-img" :src="computer.imagen"
+                        id="imgComputer"
+                        width="1000px" height="1000px">
+                </div>
+
+            </div>
+
+            <div class="fixed-action-btn">
+                <a class="btn-floating btn-large waves-effect waves-light red" @click="iniciar">
+                    <i class="large material-icons">play_arrow</i>
+                </a>
+            </div>
+
+        </div>
+
+
+
+
+        <!--JavaScript at end of body for optimized loading-->
+        <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+        <script type="text/javascript" src="vue.js"></script>
+        <script type="text/javascript" src="site.js"></script>
+
+    </body>
+
+</html>
